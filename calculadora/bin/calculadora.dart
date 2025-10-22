@@ -23,7 +23,51 @@ void main() {
     print(numeroUm * numeroDois);
   }
 
-  // Maneira 3 - Switch
+  /*
+    // Maneira 1 - IF
+
+    if(operacao == "+") { soma(); }
+    if(operacao == "-") { subtracao(); }
+    if(operacao == "/") { divisao(); }
+    if(operacao == "*") { multiplicacao(); }
+
+    ----------------------------------------
+
+    // Maneira 2 - IF/ELSE
+
+    if(operacao == "+") {
+      soma();
+    } else {
+      if(operaco == "-") {
+        subtracao();
+      } else {
+        if(operaco == "/") {
+          divisao();
+        } else {
+          if(operaco == "*") {
+            multiplicacao();
+          }
+        }
+      } 
+    }
+
+    ----------------------------------------
+
+    // Maneira 3 - IF/ELSE IF
+
+    if(operacao == "+") { 
+      soma();
+    } else if(operacao == "-") {
+      subtracao();
+    } else if(operacao == "/"){
+      divisao();
+    } else if(operacao == "*") {
+      multiplicacao();
+    }    
+
+  */
+
+  // Maneira 4 - Switch
   switch(operacao) {
     case "+": soma(); break;
     case "-": subtracao(); break;
@@ -31,28 +75,6 @@ void main() {
     case "*": multiplicacao(); break;
     default: print("Entrada inválida!!");
 
-    /*
-      // Maneira 1 - IF
-
-      if(operacao == "+") { soma(); }
-      if(operacao == "-") { subtracao(); }
-      if(operacao == "/") { divisao(); }
-      if(operacao == "*") { multiplicacao(); }
-
-      ----------------------------------------
-
-      // Maneira 2 - IF/ELSE IF
-
-      if(operacao == "+") { 
-        soma();
-      } else if(operacao == "-") {
-        subtracao();
-      } else if(operacao == "/"){
-        divisao();
-      } else if(operacao == "*") {
-        multiplicacao();
-      }    
-
-    */
+    
   }
 }
