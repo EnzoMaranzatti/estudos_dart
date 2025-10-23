@@ -2,7 +2,7 @@
 
 Para desenvolver melhor a linguagem dart, vamos desenvolver um exercicio simples, sendo ele uma calculadora para realizar operações, usando as entradas dos usuários para o calculo do resultado.
 
-### 🛠 Null safety
+## 🛠 Null safety
 
 No mundo da programação, os valores nulos podem ser um campo minado de erros.
 
@@ -15,14 +15,14 @@ O valor 0 é um dado do tipo `int`.
 Mas o valor `null` significa: "nenhum valor atribuído".
 ```
 
-#### Por que o null é perigoso?
+### Por que o null é perigoso?
 
 Imagine tentar acessar uma variável que não foi inicializada ou usar um dado que simplesmente não existe.
 Em muitas linguagens, isso causa erros em tempo de execução — famosos **NullPointerException**.
 
 O `Dart` resolve isso com *null safety*, que obriga o desenvolvedor a pensar sobre a possibilidade de um valor ser nulo e a tratá-la adequadamente.
 
-#### Tipos anuláveis e não anuláveis
+### Tipos anuláveis e não anuláveis
 
 Por padrão, em `Dart`, toda variável deve ter um valor válido do tipo declarado.
 Se um valor puder ser nulo, o tipo da variável precisa deixar isso explícito usando um ponto de interrogação `(?)`.
@@ -35,7 +35,7 @@ String? apelido = null;  // pode ser nulo
 Se você tentar atribuir null a uma variável que não aceita nulos, o compilador já avisa o erro antes mesmo de executar o programa.
 Essa é uma das principais vantagens da null safety.
 
-#### Exemplo prático
+### Exemplo prático
 
 ```dart
 import 'dart:io';
@@ -48,7 +48,7 @@ void main() {
 O método `readLineSync()` pode retornar null — por exemplo, se o usuário encerrar a entrada.
 Por isso, o tipo da variável deve ser anulável (String?).
 
-#### O operador de negação de nulidade (!)
+### O operador de negação de nulidade (!)
 Em alguns casos, você tem certeza de que o valor não será nulo.
 Nesses momentos, é possível usar o operador `!` para dizer ao Dart:
 
@@ -63,11 +63,11 @@ void main() {
 }
 ```
 
-### ⚙ Tipos de dados 
+## ⚙ Tipos de dados 
 
 Em `Dart` temos os *tipos primitivos* e os *tipos compostos*. Abaixo está a explicação de cada um
 
-#### 1. Tipos primitivos
+### 1. Tipos primitivos
 
 Os tipos primitivos são os elementos mais básicos para armazenar valores simples. Imagine-os como as peças únicas do seu quebra-cabeça. Ou seja, são *tipos simples, compostos de uma única parte.
 
@@ -80,7 +80,7 @@ No `Dart` encontramos os seguintes tipos primitivos:
 Um detalhe importante é que, no `Dart`, String pode ser considerada um tipo primitivo, diferente de outras linguagens de programação. Esse caso é uma exceção, pois no `Dart` todos os tipos primitivos e compostos são uma referência a um objeto.
 ```
 
-#### 2. Tipos Composstos
+### 2. Tipos Composstos
 
 Já os tipos compostos são como se fossem *conjuntos de peças do quebra-cabeça que se unem para criar algo maior. Ou seja, são tipos compostos por mais de uma parte.*
 
