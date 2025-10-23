@@ -2,17 +2,68 @@
 
 Para desenvolver melhor a linguagem dart, vamos desenvolver um exercicio simples, sendo ele uma calculadora para realizar operações, usando as entradas dos usuários para o calculo do resultado.
 
-### Null safety
+### 🛠 Null safety
 
 No mundo da programação, os valores nulos podem ser um campo minado de erros.
 
-É ai que entra a *segurança contra nulos* (null safety), um recurso do `Dart` que ajuda você a escrever um código mais confiável, ou seja, menos sujeito a interrupções e erros.
+É aí que entra a segurança contra nulos (null safety), um recurso do `Dart` que ajuda você a escrever um código mais confiável — ou seja, menos sujeito a interrupções e falhas inesperadas.
 
-```
-Um valor nulo é um "valor vazio". Um texto vazio "" é um dado do tipo `string` que não tem nenhum valor, não tem nada. O valor 0 é um valor do tipo int.
+```dart
+Um valor nulo é um "valor vazio". 
+Um texto vazio "" é um dado do tipo `String` que não tem caracteres.
+O valor 0 é um dado do tipo `int`.
+Mas o valor `null` significa: "nenhum valor atribuído".
 ```
 
-### Tipos de dados
+#### Por que o null é perigoso?
+
+Imagine tentar acessar uma variável que não foi inicializada ou usar um dado que simplesmente não existe.
+Em muitas linguagens, isso causa erros em tempo de execução — famosos **NullPointerException**.
+
+O `Dart` resolve isso com *null safety*, que obriga o desenvolvedor a pensar sobre a possibilidade de um valor ser nulo e a tratá-la adequadamente.
+
+#### Tipos anuláveis e não anuláveis
+
+Por padrão, em `Dart`, toda variável deve ter um valor válido do tipo declarado.
+Se um valor puder ser nulo, o tipo da variável precisa deixar isso explícito usando um ponto de interrogação `(?)`.
+
+```dart
+String nome = 'Ana';     // nunca pode ser nulo
+String? apelido = null;  // pode ser nulo
+```
+
+Se você tentar atribuir null a uma variável que não aceita nulos, o compilador já avisa o erro antes mesmo de executar o programa.
+Essa é uma das principais vantagens da null safety.
+
+#### Exemplo prático
+
+```dart
+import 'dart:io';
+
+void main() {
+  String? nome = stdin.readLineSync(); // Pode ser nulo
+  print('Olá, $nome!');
+}
+```
+O método `readLineSync()` pode retornar null — por exemplo, se o usuário encerrar a entrada.
+Por isso, o tipo da variável deve ser anulável (String?).
+
+#### O operador de negação de nulidade (!)
+Em alguns casos, você tem certeza de que o valor não será nulo.
+Nesses momentos, é possível usar o operador `!` para dizer ao Dart:
+
+`“Confia em mim, esse valor não será nulo.”`
+
+```dart
+import 'dart:io';
+
+void main() {
+  String nome = stdin.readLineSync()!; // força o valor a não ser nulo
+  print('Olá, $nome!');
+}
+```
+
+### ⚙ Tipos de dados 
 
 Em `Dart` temos os *tipos primitivos* e os *tipos compostos*. Abaixo está a explicação de cada um
 
