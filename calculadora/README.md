@@ -76,9 +76,9 @@ No `Dart` encontramos os seguintes tipos primitivos:
 - Texto: `String` (sequência de caracteres)
 - Caracteres: `rune` (Um único caractere)
 
-```text
-Um detalhe importante é que, no `Dart`, String pode ser considerada um tipo primitivo, diferente de outras linguagens de programação. Esse caso é uma exceção, pois no `Dart` todos os tipos primitivos e compostos são uma referência a um objeto.
-```
+
+> Um detalhe importante é que, no `Dart`, String pode ser considerada um tipo primitivo, diferente de outras linguagens de programação. Esse caso é uma exceção, pois no `Dart` todos os tipos primitivos e compostos são uma referência a um objeto.
+
 
 ### 2. Tipos Composstos
 
