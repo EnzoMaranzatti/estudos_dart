@@ -2,9 +2,9 @@ import 'dart:io';
 
 void main() {
   print("----------------------CALCULADORA----------------------\n");
-  double numeroUm = double.parse(stdin.readLineSync()!);
-  double numeroDois = double.parse(stdin.readLineSync()!);
-  String operacao = stdin.readLineSync()!;
+  double numeroUm = 0;
+  double numeroDois = 0;
+  String operacao = "";
 
 
   void soma() { 
@@ -23,58 +23,45 @@ void main() {
     print(numeroUm * numeroDois);
   }
 
-  /*
-    // Maneira 1 - IF
-
-    if(operacao == "+") { soma(); }
-    if(operacao == "-") { subtracao(); }
-    if(operacao == "/") { divisao(); }
-    if(operacao == "*") { multiplicacao(); }
-
-    ----------------------------------------
-
-    // Maneira 2 - IF/ELSE
-
-    if(operacao == "+") {
-      soma();
-    } else {
-      if(operaco == "-") {
-        subtracao();
-      } else {
-        if(operaco == "/") {
-          divisao();
-        } else {
-          if(operaco == "*") {
-            multiplicacao();
-          }
-        }
-      } 
+  void calcular() {
+    // Maneira 4 - Switch
+    switch(operacao) {
+      case "+": soma(); break;
+      case "-": subtracao(); break;
+      case "/": divisao(); break;
+      case "*": multiplicacao(); break;
+      default: print("Entrada inválida!!"); 
     }
-
-    ----------------------------------------
-
-    // Maneira 3 - IF/ELSE IF
-
-    if(operacao == "+") { 
-      soma();
-    } else if(operacao == "-") {
-      subtracao();
-    } else if(operacao == "/"){
-      divisao();
-    } else if(operacao == "*") {
-      multiplicacao();
-    }    
-
-  */
-
-  // Maneira 4 - Switch
-  switch(operacao) {
-    case "+": soma(); break;
-    case "-": subtracao(); break;
-    case "/": divisao(); break;
-    case "*": multiplicacao(); break;
-    default: print("Entrada inválida!!");
-
-    
   }
+
+  print("Digite o primeiro valor");
+
+  String? entrada = stdin.readLineSync();
+
+  if(entrada != null) {
+    if(entrada != "") {
+      numeroUm = double.parse(entrada);
+    }
+  }
+
+  print("Digite uma operação");
+
+  entrada = stdin.readLineSync();
+  if(entrada != null) {
+    operacao = entrada;
+  }
+
+  print("Digite o segundo valor");
+
+  entrada = stdin.readLineSync();
+  if(entrada != null) {
+    if(entrada != "") {
+      numeroDois = double.parse(entrada);
+    }
+  }
+
+  print("O resultado da operação é:");
+
+  calcular();
+  
 }
