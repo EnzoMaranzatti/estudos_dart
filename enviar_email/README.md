@@ -19,10 +19,14 @@
    * [Set](#set)
    * [Map](#map)
    * [Iterable](#iterable)
-4. [Métodos e Operações](#métodos-e-operações)
-5. [Boas práticas e recomendações](#boas-práticas-e-recomendações)
-6. [Exemplos executáveis (DartPad)](#exemplos-executáveis-dartpad)
-7. [Fontes oficiais](#fontes-oficiais)
+4. [Literais e inicialização](#literais-e-inicialização)
+4. [Growable vs Fixed-length](#growable-vs-fixed-length)
+5. [Imutabilidade e Views](#imutabilidade-e-views)
+6. [Generics em Collections](#generics-em-collections)
+7. [Métodos Funcionais de Collections](#métodos-funcionais-de-collections)
+8. [Combinações avançadas](#combinações-avançadas)
+9. [Biblioteca](#biblioteca)
+10. [Pacote collection](#pacote-collection)
 
 ---
 
@@ -84,7 +88,7 @@ Vamos detalhar cada tipo com **explicações, tabelas de métodos principais e e
 
 ---
 
-## 🧾 List
+## List
 
 Uma **List** é uma coleção **ordenada** de elementos, acessados por índice (começando em 0).
 É semelhante a um array em outras linguagens, mas com muitos recursos adicionais.
@@ -141,10 +145,6 @@ void main() {
 
 ---
 
-# Parte 2 — Set, Map e Iterable
-
----
-
 ## Set
 
 `Set<T>` armazena elementos **únicos**, ou seja, não há duplicatas.
@@ -191,7 +191,7 @@ void main() {
 
 ---
 
-## Map<K, V>
+## Map
 
 `Map<K, V>` é uma coleção de pares **chave → valor**, com chaves únicas.
 O tipo mais comum é `HashMap`, com acessos médios O(1).
@@ -282,10 +282,6 @@ void main() {
   print(i.toList()); // [4, 16]
 }
 ```
-
----
-
-# Parte 3 — Literais, Termos-chave, Growable e Imutabilidade
 
 ---
 
@@ -503,7 +499,7 @@ void main() {
 
 ---
 
-## 🧰 Biblioteca `dart:collection`
+## Biblioteca
 
 A biblioteca [`dart:collection`](https://api.dart.dev/stable/dart-collection/dart-collection-library.html) contém coleções e *wrappers* especiais com funcionalidades extras além das básicas de `List`, `Set` e `Map`.
 
@@ -551,7 +547,7 @@ void main() {
 
 ---
 
-## 📦 Pacote `collection` (externo)
+## Pacote collection
 
 O pacote [`collection`](https://pub.dev/packages/collection) (mantido pela equipe oficial do Dart) estende as coleções padrão com **comparadores, mixins, equality helpers** e **views otimizadas**.
 
@@ -588,10 +584,4 @@ void main() {
   print(combined.toList()); // [1, 2, 3, 4]
 }
 ```
-
----
-
-Quer que eu siga com a **Parte 5 (Performance, Boas práticas, Cheatsheet e Exemplos executáveis)** para finalizar o README?
-
-
 
