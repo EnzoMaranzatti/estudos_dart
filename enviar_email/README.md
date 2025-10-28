@@ -1,8 +1,3 @@
-Aqui está a **Parte 1/5** do seu `README.md` sobre **Collections em Dart** — formatada para GitHub com badges, TOC e exemplos DartPad.
-Quando quiser, envio as **Partes 2 a 5** para você montar o arquivo completo.
-
----
-
 # 🧠 Dart Collections — Guia Completo
 
 [![Dart](https://img.shields.io/badge/Dart-3.0+-blue?logo=dart)](https://dart.dev)
