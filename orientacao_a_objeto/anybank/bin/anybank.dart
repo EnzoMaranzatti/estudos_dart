@@ -35,6 +35,6 @@ class Conta {
   String titular;
   double saldo;
 
-  // Função construtora
+  
   Conta(this.titular, this.saldo);
 }
