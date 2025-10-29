@@ -3,6 +3,7 @@
   Objeto: é uma variavel criada a partir de uma classe;
   Intanciação: é o processo de criar um objeto a partir de uma classe
 */
+import 'package:anybank/Conta.dart';
 
 void main() {
   // List<String> contas = <String>["Matheus", "Roberta"];
@@ -14,27 +15,10 @@ void main() {
   List<Conta> contas = <Conta>[contaMatheus, contaRoberta];
 
   for(Conta conta in contas) {
-    print(conta.titular);
-    print(conta.saldo);
+    conta.infoSaldo();
   }
 
-  contaRoberta.saldo = 5000;
+  contaMatheus.receber(500);
+  contaMatheus.enviar(500, contaRoberta);
 }
 
-// class ContaMathues {
-//   String titulas = "Matheus";
-//   double saldo = 1000;
-// }
-
-// class ContaRoberta {
-//   String titular = "Roberta";
-//   double saldo = 2000;
-// }
-
-class Conta {
-  String titular;
-  double saldo;
-
-  
-  Conta(this.titular, this.saldo);
-}
