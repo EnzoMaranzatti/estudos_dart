@@ -4,6 +4,7 @@ void main() {
   List<String> notas = <String>[];
   
   menu(notas);
+
 }
 
 String getComando() {
