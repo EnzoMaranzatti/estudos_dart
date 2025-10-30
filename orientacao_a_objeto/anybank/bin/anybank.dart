@@ -9,11 +9,12 @@ void main() {
   // List<String> contas = <String>["Matheus", "Roberta"];
   // List<double> saldos = <double>[1000, 2000];
 
-  Conta contaMatheus = Conta("Matheus", 1000);
-  Conta contaRoberta = Conta("Roberta", 2000);
+  // Conta contaMatheus = Conta("Matheus", 1000);
+  // Conta contaRoberta = Conta("Roberta", 2000);
 
   ContaCorrente contaDaiane = ContaCorrente("Enzo Vinicius", 8000);
   ContaPoupanca contaEduardo = ContaPoupanca("Eduardo", 3000);
+  ContaSalario contaSalarioCatarina = ContaSalario("Catarina", 1500, "82.965.584.698:8479-75", "Azan");
 
   List<Conta> contas = <Conta>[contaMatheus, contaRoberta];
 
@@ -27,4 +28,6 @@ void main() {
   contaEduardo.infoSaldo();
   contaEduardo.calculaRendimento();
   contaEduardo.infoSaldo();
+  contaSalarioCatarina.infoSaldo();
+  contaSalarioCatarina.depositarSalario(400);
 }
