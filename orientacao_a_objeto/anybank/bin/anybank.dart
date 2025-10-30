@@ -1,7 +1,7 @@
 /*
-  Classe: Molde de uma representação de um elemento da vida real;
-  Objeto: é uma variavel criada a partir de uma classe;
-  Intanciação: é o processo de criar um objeto a partir de uma classe
+  - Classe: Molde de uma representação de um elemento da vida real;
+  - Objeto: é uma variavel criada a partir de uma classe;
+  - Intanciação: é o processo de criar um objeto a partir de uma classe
 */
 import 'package:anybank/conta.dart';
 
@@ -12,6 +12,9 @@ void main() {
   Conta contaMatheus = Conta("Matheus", 1000);
   Conta contaRoberta = Conta("Roberta", 2000);
 
+  ContaCorrente contaDaiane = ContaCorrente("Enzo Vinicius", 8000);
+  ContaPoupanca contaEduardo = ContaPoupanca("Eduardo", 3000);
+
   List<Conta> contas = <Conta>[contaMatheus, contaRoberta];
 
   for(Conta conta in contas) {
@@ -20,5 +23,8 @@ void main() {
 
   contaMatheus.receber(500);
   contaMatheus.enviar(500, contaRoberta);
+  contaDaiane.enviar(6000, contaMatheus);
+  contaEduardo.infoSaldo();
+  contaEduardo.calculaRendimento();
+  contaEduardo.infoSaldo();
 }
-

@@ -1,14 +1,3 @@
-// class ContaMathues {
-//   String titulas = "Matheus";
-//   double saldo = 1000;
-// }
-
-// class ContaRoberta {
-//   String titular = "Roberta";
-//   double saldo = 2000;
-// }
-//
-
 class Conta {
   String titular;
   double _saldo;
@@ -29,4 +18,27 @@ class Conta {
   }
 
   void infoSaldo() => print("O saldo atual de $titular, é: R\$$_saldo");
+}
+
+class ContaCorrente extends Conta {
+  ContaCorrente(super.titular, super._saldo);
+  double emprestimo = 300;
+
+  // Sobreescrever
+  @override
+  void enviar(double valor, Conta destinatario) {
+    if(_saldo + emprestimo >= valor) {
+      _saldo -= valor;
+      print("$titular enviou R\$$valor para ${destinatario.titular}");
+    }
+  }
+}
+
+class ContaPoupanca extends Conta {
+  double rendimento = 0.05;
+  ContaPoupanca(super.titular, super._saldo);
+
+  void calculaRendimento() {
+    _saldo += _saldo * rendimento;
+  }
 }
