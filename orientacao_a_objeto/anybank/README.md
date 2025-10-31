@@ -75,11 +75,15 @@ void main() {
 - Ambos podem usar o método `comer()` herdado da classe Animal;
 - Além disso, o cachorro pode latir e o gato pode miar, utilizando seus métodos específicos que foram criados dentro das classes.
 
+---
+
 ## Classes Abstratas
 
 Em Dart, podemos pensar em uma classe abstrata como um "esqueleto" de uma classe. Ela define uma estrutura básica como um guia, com propriedades e métodos, mas não pode ser instanciada diretamente. Ou seja, você não pode criar um objeto a partir de uma classe abstrata.
 
 Em orientação a objetos, a classe abstrata é, de forma mais técnica, uma classe que não pode ser instanciada, ou seja, você não pode criar um objeto a partir de uma classe abstrata. Então qual a utilidade?
+
+---
 
 ### Então por que usar classes abstratas?
 
@@ -87,6 +91,8 @@ Você pode utilizar uma classe abstrata reaproveitando-a dentro de outras classe
 
 - Com classes abstratas, nós definimos um "contrato" que as subclasses devem seguir, garantindo que todas as classes que herdam dela tenham as mesmas funcionalidades e propriedades.
 - Incentivamos também o polimorfismo permitindo que objetos de diferentes classes sejam tratados como se fossem de uma classe abstrata mãe. Ex: Uma conta corrente ainda é um tipo de conta.
+
+---
 
 #### Exemplo
 
@@ -118,9 +124,13 @@ class Quadrado extends Figura {
 }
 ```
 
+---
+
 **Explicando o código:**
 - A classe Figura é uma classe abstrata. Ela define um método abstrato calcularArea(), que não possui implementação.
 - As classes Circulo e Quadrado herdam da classe Figura. Elas implementam o método abstrato calcularArea() de acordo com suas respectivas fórmulas.
+
+---
 
 **Como usar:**
 
@@ -133,29 +143,41 @@ void main() {
   print('Área do quadrado: ${quadrado.calcularArea()}');
 }
 ```
+
+--- 
+
 **O que aconteceu:**
 
 - Criamos um círculo e um quadrado.
 - Ambos podem calcular suas áreas, pois implementam o método abstrato herdado.
 
+---
+
 ## Interface
 
 Uma **interface** define padrões que uma classe deve cumprir. Ela especifica quais os métodos e propriedades que uma classe deve ter, sem se preocupar com a implementação. É bem parecido com o conceito de classes abstratas, mas com uma mudança.
+
+---
 
 ### Por que usar interfaces?
 
 - `Polimorfismo:` cada classe que usa uma interface precisa implementar da sua própria maneira os métodos da interface;
 - `Desacoplamento:` a interface aumenta o desacoplamento entre as classes (separação de responsabilidades), o que deixa o código mais flexível e fácil de manter.
 
+---
+
 ## Mixins
 
 **Mixins** são uma forma de reutilizar código em Dart sem a necessidade de criar uma hierarquia de herança complexa. É como adicionar uma característica sem precisar de uma implementação complicada de superclasses. Pense que você cria um pequeno trecho de código que pode ser reaproveitado para executar alguma coisa dentro do código.
 
+---
 
 ### Por que usar mixins?
 
 - Podemos compartilhar comportamentos entre classes sem criar uma hierarquia rígida;
 - Mixins permitem combinar diferentes características em uma única classe. Funciona quase como múltiplas heranças.
+
+---
 
 #### Vamos ver um exemplo com código relacionado à habilidades:
 
