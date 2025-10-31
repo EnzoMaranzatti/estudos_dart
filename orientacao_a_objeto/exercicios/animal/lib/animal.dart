@@ -1,6 +1,6 @@
-class Animal {
+abstract class Animal {
   void emitirSom() {
-    print("Animal emiti um som");
+    print("Animal emiti som");
   }
 }
 
