@@ -18,12 +18,12 @@ class Medico implements Agendamento {
 class Dentista implements Agendamento {
   @override
   calculaDuracaoConsulta() {
-    print("A duração de uma consulta médica é de 45 minutos")
+    print("A duração de uma consulta médica é de 45 minutos");
   }
 
   @override
   verificaDisponibilidade() {
-    print("Dentistas têm intervalos de 15 minutos entre consultas.")
+    print("Dentistas têm intervalos de 15 minutos entre consultas.");
   }
 }
 

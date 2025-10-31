@@ -53,5 +53,39 @@ class ContaSalario extends Conta {
     _saldo += valor;
     print("O salário da $nomeEmpresa, de CNPJ $cnpj no valor de R\$$valor foi depositado!");
   }
+}
 
+mixin Imposto {
+  double taxa = 0.03;
+  double valorTaxado(double valor) => valor * taxa;
+}
+
+class ContaEmpresa extends Conta with Imposto {
+  ContaEmpresa(super.titular, super._saldo);
+
+  @override
+  void enviar(double valor, Conta destinatario) {
+    if(_saldo >= valor + valorTaxado(valor)) {
+      _saldo -= valor + valorTaxado(valor);
+      print("$titular enviou R\$$valor para ${destinatario.titular}");
+    }
+  }
+
+  @override
+  void receber(double valor) => _saldo += valor - valorTaxado(valor);
+}
+
+class ContaInvestimento extends Conta with Imposto {
+  ContaInvestimento(super.titular, super._saldo);
+
+  @override
+  void enviar(double valor, Conta destinatario) {
+      if(_saldo >= valor + valorTaxado(valor)) {
+      _saldo += valor + valorTaxado(valor);
+      print("$titular enviou R\$$valor para ${destinatario.titular}");
+    }
+  }
+
+  @override 
+  void receber(double valor) => _saldo += valor - valorTaxado(valor);
 }
