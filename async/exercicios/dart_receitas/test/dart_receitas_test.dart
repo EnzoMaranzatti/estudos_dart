@@ -1,4 +1,4 @@
-import 'package:dart_receitas/dart_receitas.dart';
+import 'package:dart_receitas/conexao.dart';
 import 'package:test/test.dart';
 
 void main() {
